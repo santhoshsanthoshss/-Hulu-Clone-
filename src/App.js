@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState } from "react";
+import Header from "./components/Header/Header";
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import requests from "./components/helpers/requests";
+import Results from "./components/Results/Results.jsx";
+const App = () => {
+  const [selected, setselected] = useState(requests.fetchTrending);
+  console.log(selected);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Navbar setselected={setselected} />
+      <Results selected={selected} />
     </div>
   );
-}
+};
 
 export default App;

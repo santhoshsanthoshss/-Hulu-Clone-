@@ -1,0 +1,45 @@
+.header {
+  color: white;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.header::-webkit-scrollbar {
+  display: none;
+}
+.header_icons {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.header_icon {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.header_icon > p {
+  display: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: small;
+}
+
+.header_icon:hover > p {
+  display: inline-flex !important;
+}
+
+.user1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header > img {
+  object-fit: contain;
+  height: 80px;
+}
